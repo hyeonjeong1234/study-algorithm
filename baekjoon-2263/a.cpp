@@ -70,10 +70,7 @@
 //	cout << max_dis;
 //	return 0;
 //}
-#include<iostream>
-#include<vector>
-#include<queue>
-using namespace std;
+
 //typedef struct 
 //{
 //	char val;
@@ -140,19 +137,44 @@ using namespace std;
 //	postsearch(tree, tree[1]);
 //}
 
-typedef struct 
+#include<iostream>
+#include<vector>
+#include<queue>
+using namespace std;
+
+
+void make_pre(int root, vector<int> inorder, vector<int> postorder, int start_indx, int end_indx)
 {
-	int val;
-	int right;
-	int left;
-}node;
+	int root_index = 0;
+	vector<int> cut_inorder;
+	vector<int> cut_postorder;
+	cout << root<<" ";
+	if (inorder.size()== 1)
+	{
+		return;
+	}
+	for (int i = 0; i < inorder.size(); i++)
+	{
+		if (root == inorder[i])
+		{
+			root_index = i;
+			break;
+		}
+	}
+	for (int i = 0; i < root_index; i++)
+	{
+		cut_inorder.push_back(inorder[i]);
+	}
 
-void make_pre()
-{
-	if()//인수로 받은 post맨끝 요소 in에서찾고 루트 찍고 그 앞부분자르고 또 
-}// in에서 찾은 루트 앞부분 개수만큼 post개수 끊어서 맨마지막꺼 찾고 찍고 자르고 근데 그게 in이랑 post랑 순서 내용같으면 순서대로 찍고 끝내고 오른쪽으로
+	make_pre(postorder[root_index-1]);
 
-
+} //post->맨끝->루트
+ // in->root인덱스찾고 그앞부분은 또다른 트리!
+ // post를 in에서 찾은 루트 바로 앞 인덱스-> 다음 트리 루트
+ // 트리 크기가 3이하면 마지막 트리!
+// 나찍고 왼 오
+//오른쪽 트리로가서 반복
+//탐색 시작 인덱스 끝인스 제공
 int main()
 {
 	int n = 0;
@@ -172,18 +194,6 @@ int main()
 		cin >> num;
 		post.push_back(num);
 	}
-	for (int i = 0; i < in.size(); i++)
-	{
-		if (in[i] == post.back())
-		{
-			root = in[i];
-			break;
-		}	
-	}
-	cout << root<<" ";
-	for (int i = 0; i < n - 1; i++)
-	{
-		cout << post[i]<<" ";
-	}
+	make_pre(post.back(), in, post);
 	return 0;
 }
