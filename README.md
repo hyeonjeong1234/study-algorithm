@@ -16,6 +16,6 @@
 - review: 풀이 완료 후 복습한 내용 기록
 
 > 풀이가 완료된 문제의 **최종 코드**는 별도의 레포지토리에 보관됩니다.  
-👉 [최종 풀이 코드 레포지토리](https://github.com/hyeonjeong1234/Baekjoon)
+👉 [백준 최종 풀이 코드 레포지토리](https://github.com/hyeonjeong1234/Baekjoon)
 
 ---
