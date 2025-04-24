@@ -42,17 +42,13 @@
     while(!que.empty())
     {
         int thisnode = que.front();
-        if(parent[thisnode]≠ 0)
+        for(int i = 0; i<tree[thisnode].size();i++)
         {
-            for(int i = 0; i<tree[thisnode].size();i++)
-          {
-                if(tree[thisnode][i] ≠ parent[thisnode])
-
-                {
-                    que.push(tree[thisnode][i]);
-                    parent[tree[thisnode][i]]=thisnode;
-                }
-          }
+            if(tree[thisnode][i] != parent[thisnode])
+            {
+                que.push(tree[thisnode][i]);
+                parent[tree[thisnode][i]]=thisnode;
+            }
         }
         que.pop();
     }
