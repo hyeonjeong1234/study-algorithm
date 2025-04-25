@@ -14,6 +14,8 @@ bool cmp(string a, string b)
     return a < b; // <이면 앞에게 작고 뒤로갈수록 크게 => 오름차순으로 정렬
   return a.size() < b.size(); // 정렬 조건을 a.size()로 표기하여 단어 길이 기준으로 정렬
 }
+//사용자정의 함수를 포함한 sort함수 호출 예시
+sort(words.begin(),words.end(),cmp);
 ```
 **반복되는 단어는 한번만 출력**
 ```
