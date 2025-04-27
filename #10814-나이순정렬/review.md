@@ -19,7 +19,7 @@
     cout<<a.second;
 ```
 **- #include<algorith> sort(사용자정의 함수 사용)함수 이용하여 정렬**
-``
+```
 bool cmp(pair<int,pair(a,b)>c, pair<int,pair(e,f)>g)
 {
   if(c.second.first == g.second.first)
@@ -28,4 +28,4 @@ bool cmp(pair<int,pair(a,b)>c, pair<int,pair(e,f)>g)
     return c.second.first<g.second.first; // 나이순으로 오름차순 정렬
 }
 sort(a.begin(),a.end(),cmp);
-``
+```
