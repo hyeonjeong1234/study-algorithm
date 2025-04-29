@@ -6,4 +6,4 @@
 
 ### <algorithm> binary_search(start,end,tofind) 이용
 ### 검색할 배열 sort() 이용해서 정렬 후 검색
-## binary_search 직접 구현해보기
+### binary_search 직접 구현해보기
