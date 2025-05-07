@@ -10,7 +10,7 @@ cin.tie(nullptr)
 cout.tie(nullptr)
 ```
 ### 입출력 시간 줄이는 코드 알아보기 (원문 : https://velog.io/@d2h10s/c-iossyncwithstdio%EB%9E%80)
-
+### 원문의 내용을 정리한것
 **- stream : 주변기기로 부터 입출력 받는 통로**<br/>
 
 **- standard stream**<br/>
