@@ -1,6 +1,6 @@
 # 🥹 오늘의 코딩 문제
 
-## 2025-05-12 피보나치 함 (https://www.acmicpc.net/problem/1003)
+## 2025-05-12 피보나치 함수 (https://www.acmicpc.net/problem/1003)
 
 ### 피보나치 재귀함수를 실행할 시 1과 0이 몇번 출력되는지 구하시오
 
