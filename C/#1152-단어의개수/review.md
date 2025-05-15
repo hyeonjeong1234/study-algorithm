@@ -11,8 +11,8 @@
 ⚠️ strtok(char*," "); //자를 문자열, 구분자 인수로 가짐(https://shjz.tistory.com/48)</br>
 ```
   => char*word = strtok();//word에 " "을 찾은 다음 문자열 주소 저장</br>
-    ```
-    ex) sentence = The Curious Case of Benjamin Button
+  ```
+    //ex) sentence = The Curious Case of Benjamin Button
     char * word;
     word = strtok(sentence, " ");//공백 찾은후 \0로 바꿈. 처음 자를때만 자른 문자열 첫주소 반환!!!!! => word = The
     while(word!=NULL) // 두번째 strtok부터는 공백 다음 문자를 반환하기 때문에 word가 null인지 확인 후 반복 
@@ -21,7 +21,7 @@
       word = strtok(NULL, " ");// 처음 자를때 찾은 NULL부터 탐색 시작. 공백 찾은 후 null넣고 공백 다음 단어 첫주소 반환!
     }
     //마지막 단어앞 null부터 시작 한 경우 공백 문자를 찾지 못하고 word가 null을 반환함=> 반복문 종료
-    ```
+ ```
 - **⚠️ 문장은 공백으로 시작 가능 -> 공백만 있는 문장도 신경써줘야함!</br>**
   - scanf, fgets차이 (https://velog.io/@kdo6301/fgets%EC%99%80-scanf%EC%9D%98-%EC%B0%A8%EC%9D%B4)</br>
   - scanf("%[^\n]s",sentence) 사용할 경우 문장만 입력받고 "\n"은 입력되지 않기 때문에 따로 조건 필요 없이 while문 실행횟수 카운트</br>
@@ -37,14 +37,5 @@
     word = strtok(null," ");
   }
   ```
-
-  ```
-  char* word;
-  word = strtok(sentence, " ");  
-  if(*word!='\n')
-    result++;
-  ```
-공백인 경
-```
-atoi(char*str); //문자열을 숫자로 변환
-```
+ ### ⚠️ scanf("%[^/n]s",sentence); 사용시 주의 사항
+**"\n"이 아직 버퍼에 남아있기 때문에 연속으로 입력 받아야 할 경우 fflush(stdin); 사용하여 버퍼 비워주고 받아야함**
