@@ -2,8 +2,8 @@
 
 ## 2025-05-27 Hashing (https://www.acmicpc.net/problem/15829)
 
-### 문자열 해싱하는 함수 구현
-###  \[H = \sum_{i=0}^{l-1}{a_ir^i} \mod M\] (r = 31, M = 1234567891)
+### 문자열 해싱하는 함수 구현 (a =1 . . . z = 26)
+### $H\ =\displaystyle\sum_{i=0}^{l-1}{a_ir^i}\ mod\ M\ (r = 31, M = 1234567891)$  
 ### H를 unsigned long long으로 r거듭제곱 시 선언해도 오버플로우 발생 
 ### 모듈러 계산 특징 이용 (a mod n * b mod n) mod n = (a*b)mod n (덧셈, 뺄셈도 가능)
 ```
