@@ -1,5 +1,10 @@
-###풀이전략
-###우선순위 큐 이용
+# 🥹 오늘의 코딩 문제
+
+## 2025-06-02 최소 힙(https://www.acmicpc.net/problem/1927)
+
+### 최소힙 연산 구현 0입력시 최솟값 출력 후 최솟값 삭제, 0아닐시 힙에 저장
+
+- **우선순위 큐 이용</br>**
 ```
 #include<queue>
 #include<vector>
@@ -9,4 +14,5 @@ priority_queue<int> pq_less; //내림차순 정렬
 priority_queue.pop() //맨 앞요소 삭제
 priority_queue.top() //맨 앞요소 확인
 ```
-https://yabmoons.tistory.com/246(힙정렬 구현?)
+
+// https://yabmoons.tistory.com/246 (힙정렬 구현?)
