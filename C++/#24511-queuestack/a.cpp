@@ -47,11 +47,6 @@ int main()
                 x = A[j].second.first.front();
                 A[j].second.first.pop();
             }
-            else {
-                A[j].second.second.push(x);
-                x = A[j].second.second.top();
-                A[j].second.second.pop();
-            }
         }
         cout << x << " ";
     }
